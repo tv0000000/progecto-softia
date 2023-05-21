@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;1,800;1,900&family=Ubuntu:wght@300&display=swap');
+
+:root {
+  --colorblue: #37517e;
+  --colorwhite: #f3f5fa;
+  --colorligthblue: #47b2e4;
+  --colorgery: #e4e5e64b;
+  --organe: #f96f59;
+  --colorblue2: #2c4058;
+}
+
+.header {
+  background: rgba(40, 58, 90, 0.9);
+  z-index: 999;
+  position: fixed;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.373);
+  height: 90px;
+  width: 100vw;
+  /*no termino de entender poque le tengo que aplicar esto
+  si el header es un elemento en bloque...;*/
+  top: 0
+}
+
+.scrolled {
+  background-color: var(--colorblue2);
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.66);
+}
+
+.header span {
+  color: var(--organe);
+}
+
+.header a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/**** Section us ****/
+.sectionUs {
+  color: #fff;
+  margin-top: 90px;
+  overflow: hidden;
+  background: rgba(40, 58, 90, 0.9);
+  padding: 60px;
+}
+
+@media (min-width: 0px) and (max-width: 450px) {
+  .textTwo {
+    font-size: 15px;
+    padding-top: 15px;
+  }
+
+  /* si lo invierto no me toma el font-size. No tiene sentido */
+
+  .sectionUs h2 {
+    text-align: center;
+  }
+
+  ;
+}
+
+/**** Services Section ****/
+.sectionService {
+  background-color: var(--colorwhite);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* terminar de verificar subrayado */
+.serviceTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  color: var(--colorblue);
+}
+
+.serviceUnderline {
+  position: relative;
+  display: inline-block;
+}
+
+.serviceUnderline::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 50%;
+  height: 2px;
+  background-color: #37517e;
+  transform: translateX(-50%);
+}
+
+.cardService {
+  background-color: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgb(9, 9, 9);
+  filter: hue-rotate(20deg);
+}
+
+.cardContent h4 {
+  height: auto;
+}
+
+@media (min-width: 0px) and (max-width: 450px) {
+  .cardContent {
+    margin-bottom: 1rem;
+  }
+}
+
+/**** Cost Section ****/
+.sectionCost {
+  margin-bottom: 2rem;
+}
+
+.costTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  color: var(--colorblue);
+}
+
+.costTitle h2 {
+  position: relative;
+  display: inline-block;
+  margin-top: 2rem;
+}
+
+.costTitle h2::before {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  width: 50%;
+  height: 2px;
+  background-color: var(--colorblue);
+  transform: translateX(-50%);
+  /* no termino de entender esto*/
+}
+
+.sectionCost .subCost {
+  color: var(--colorblue);
+  margin-bottom: 2rem;
+}
+
+.sectionCost .developers span {
+  font-size: 70px;
+  font-weight: bolder;
+  margin-bottom: -10px;
+}
+
+.sectionCost .developers p {
+  margin-bottom: -2px;
+  font-size: 25px;
+}
+
+@media (min-width: 0px) and (max-width: 991px) {
+  .subCost {
+    text-align: center;
+  }
+
+  .sectionCost .developers {
+    margin-top: -30px;
+    /* esto sopongo que esta mal */
+  }
+
+  .sectionCost .developers p {
+    font-size: 15px;
+  }
+
+  .sectionCost .developers span {
+    font-size: 50px;
+    margin-top: 1rem;
+  }
+
+  .sectionCost .developers h4 {
+    margin-bottom: 1rem;
+    font-size: 15px;
+  }
+}
+
+/**** Client section ****/
+
+.clientSection {
+  padding: 5px;
+  background-color: var(--colorwhite);
+}
+
+.imgClient {
+  filter: hue-rotate(250deg);
+  width: 90px;
+}
+
+@media (min-width: 0px) and (max-width: 991px) {
+  .imgClient {
+    margin-top: 15px;
+    margin-left: 30px;
+    /*esto esta mal*/
+    width: 80px;
+  }
+
+  ;
+}
+
+/**** Counter section ****/
+
+.statsItem {
+  padding: 20px 0;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.pureCounter {
+  min-width: 90px;
+  padding-right: 15px;
+  color: var(--color-tertiary);
+}
+
+.statsItem span {
+  font-size: 40px;
+  display: block;
+  font-weight: 700;
+  line-height: 40px;
+}
+
+.statsItem p {
+  margin: 0;
+  font-size: 14px;
+}
+
+@media (min-width: 0px) and (max-width: 991px) {
+
+  .pureCounter {
+    min-width: 90px;
+    padding-left: 15px;
+    color: var(--color-tertiary);
+  }
+
+  .statsItem span {
+    font-size: 35px;
+    display: block;
+    font-weight: 700;
+    line-height: 40px;
+  }
+
+  .statsItem p {
+    font-size: 14px;
+  }
+}
+
+/**** Opinion Section ****/
+
+.opinionSection {
+  background-color: #fff;
+}
+
+.underlineOpinion {
+  position: relative;
+  display: inline-block;
+}
+
+.underlineOpinion::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 50%;
+  height: 2px;
+  background-color: var(--colorblue);
+  transform: translateX(-50%);
+}
+
+.bgOpinon {
+  display: flex;
+  background-color: #e4e5e64b;
+  border-radius: 10px;
+  align-items: center;
+  padding: 4px;
+}
+
+.opinionSection i {
+  color: var(--color-secondary);
+}
+
+/**** Team section ****/
+.sectionTeam {
+  background-color: var(--colorblue);
+  border-radius: 14px;
+  color: #fff;
+}
+
+.underlineTeam {
+  position: relative;
+  display: inline-block;
+}
+
+.underlineTeam::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 50%;
+  height: 2px;
+  background-color: var(--colorwhite);
+  transform: translateX(-50%);
+}
+
+.classCeo {
+  text-decoration: none;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 48px;
+  border-radius: 50px;
+  margin: 10px;
+  border: 1px solid var(--colorwhite);
+  color: #fff;
+}
+
+.classCeo:hover {
+  background: #47b2e4;
+  border: 1px solid #47b2e4;
+
+}
+
+@media (min-width: 0px) and (max-width: 991px) {
+
+  .sectionTeam h3,
+  h4,
+  a {
+    font-size: 15px;
+  }
+}
+
+/**** contact section ****/
+.sectionContact {
+  background-color: #f3f5fa;
+}
+
+.btnSend {
+  text-decoration: none;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 6px 20px;
+  border-radius: 6px;
+  border: 1px solid var(--colorwhite);
+  color: var(--colorwhite);
+  background-color: var(--colorblue);
+}
+
+.btnSend:hover {
+  background-color: #47b2e4;
+}
+
+@media (min-width: 0px) and (max-width: 991px) {
+  .info {
+    text-align: center;
+  }
+}
+
+/* footer */
+.btnActive {
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.fa {
+  color: var(--colorblue);
+}
+
+.fa:hover {
+  color: #47b2e4;
+}
